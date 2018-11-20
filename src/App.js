@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Game from './components/Game.jsx';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div style={{ flexGrow: 1 }}>
+        <AppBar position="static" color="primary" style={{ marginBottom: '40px' }}>
+          <Toolbar>
+            <Typography variant="h6" color="inherit">
+              Jogo da Velha (PWA)
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Game />
       </div>
     );
   }
 }
-
-export default App;
